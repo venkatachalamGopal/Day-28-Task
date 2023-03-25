@@ -26,11 +26,29 @@ h3{
     text-align: justify;
 
 }
+.addBtn{
+    color: black;
+    font-weight: bold;
+    position: relative;
+    left: 87%;
+}
+#brandName{
+    color: orangered;
+}
+
+#brandPrice{
+      color: rgb(206, 33, 33);
+}
+.label{
+    color: rgb(211, 39, 39);
+    font-weight: 600;
+}
 .title{
     display: flex;
     justify-content: space-around;
     margin-top: 8px;
 }
+
 .divImage{
     /* border: 2px dotted pink; */
     position: relative;

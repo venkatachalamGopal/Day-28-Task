@@ -30,8 +30,8 @@ export function Home(){
 
     return(
         <>
-        <h3>Product Lists : </h3>
-        <Button onClick={()=>navigate("/add-product")}>Add New Products</Button>
+        <h3><u>CRUD Operation - Using Formik</u> </h3>
+        <Button onClick={()=>navigate("/add-product")} className="addBtn">Add New Products</Button>
         <div className='containers'>
         {data.map((obj,index)=><Product obj={obj} key={obj.id} 
         deleteBtn={<button onClick={()=>deleteData(obj.id)} className='btn btn-danger btn-sm' >Delete</button>}/>)}
@@ -44,6 +44,7 @@ export function Home(){
 
 
 function Product({obj,deleteBtn}){
+          const navigate=useNavigate()
   
   
 
@@ -52,15 +53,15 @@ function Product({obj,deleteBtn}){
         <Card>
           <Card.Img style={{width:250}} src={obj.image} className="divImage"/>
           <Card.Title className="title">
-            <span>{obj.productname}</span>
+            <span id='brandName'>{obj.productname}</span>
             <span>{obj.rating}<small>star</small></span>
-            <span>Rs.{obj.price}</span>
+            <span id='brandPrice'>Rs.{obj.price}</span>
           </Card.Title>
           <Card.Body>{obj.description}</Card.Body>
           
           <Card.Footer className='Foot'>
             {deleteBtn}
-            <button className='btn btn-warning btn-sm'>Update</button>
+            <button onClick={()=>navigate(`/edit-product/${obj.id}`)} className='btn btn-warning btn-sm'>Update</button>
           </Card.Footer>
         </Card>
       </div>

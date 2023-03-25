@@ -61,11 +61,12 @@ export function AddProduct(){
             </Form.Group>
             <Form.Group className='mb-3'>
                 <Form.Label>Description :</Form.Label>
-l                <Form.Control type="text" placeholder='Prod Description'
+               <Form.Control type="text" placeholder='Prod Description'
                 name="description" value={formik.values.description} onChange={formik.handleChange}
                 />
             </Form.Group>
             <Button type="submit" className='btn btn-success'>SUBMIT</Button>
+            
         </Form>
        </div>
         </>
