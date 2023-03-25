@@ -16,15 +16,23 @@ h3{
     justify-content: space-between;
     align-items: center;
     margin: 5px 5px;
-    row-gap: 8px;
+    
+    
 }
+p{
+    text-align: center;
+    color: mediumpurple;
+    font-weight: bold;
+    font-size:18px ;
+}
+
 .content{
     width: 420px;
     /* border: 2px solid orange; */
-    max-height: 700px;
+    min-height: 700px;
     padding: 3px;
     text-align: justify;
-
+    row-gap: 2px;
 }
 .addBtn{
     color: black;

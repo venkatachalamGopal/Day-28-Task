@@ -6,13 +6,14 @@ import {AiFillStar} from 'react-icons/ai'
 
 
 export function Home(){
-    const [data,setData]=useState([]);console.log(data);
+    const [data,setData]=useState([]);
+    // console.log(data);
     const navigate=useNavigate()
 
 
     async function getData(){
         const Resp=await fetch(`https://641bec111f5d999a446ccd3d.mockapi.io/products`)
-        console.log(Resp);
+        // console.log(Resp);
         const data=await Resp.json();
         setData(data)
     }
@@ -31,6 +32,7 @@ export function Home(){
     return(
         <>
         <h3><u>CRUD Operation - Using Formik</u> </h3>
+        <p><u>Amazon products</u></p>
         <Button onClick={()=>navigate("/add-product")} className="addBtn">Add New Products</Button>
         <div className='containers'>
         {data.map((obj,index)=><Product obj={obj} key={obj.id} 
@@ -49,6 +51,8 @@ function Product({obj,deleteBtn}){
   
 
     return (
+      <>
+      
       <div className='content'>
         <Card>
           <Card.Img style={{width:250}} src={obj.image} className="divImage"/>
@@ -65,6 +69,7 @@ function Product({obj,deleteBtn}){
           </Card.Footer>
         </Card>
       </div>
+      </>
     );
   }
 
