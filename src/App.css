@@ -55,6 +55,10 @@ h3{
     left: 50px;
     height: 300px;
 }
+small{
+    font-size: 15px;
+}
+
 .Foot{
     
     padding: 4px;

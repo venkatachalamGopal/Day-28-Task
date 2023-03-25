@@ -1,8 +1,8 @@
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
-
 import React,{useEffect,useState} from "react";
 import { useNavigate}  from "react-router-dom"
+import {AiFillStar} from 'react-icons/ai'
 
 
 export function Home(){
@@ -54,7 +54,7 @@ function Product({obj,deleteBtn}){
           <Card.Img style={{width:250}} src={obj.image} className="divImage"/>
           <Card.Title className="title">
             <span id='brandName'>{obj.productname}</span>
-            <span>{obj.rating}<small>star</small></span>
+            <small> <AiFillStar style={{color:"orange"}}/>({obj.rating})</small>
             <span id='brandPrice'>Rs.{obj.price}</span>
           </Card.Title>
           <Card.Body>{obj.description}</Card.Body>
