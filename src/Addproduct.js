@@ -84,7 +84,9 @@ export function AddProduct(){
             </Form.Group>
             {formik.touched.description&&formik.errors.description?formik.errors.description:null}
 
-            <Button type="submit" className='btn btn-success'>SUBMIT</Button>
+            <Button type="submit" className='btn btn-success'>SUBMIT</Button> {"  "}
+            <Button type="button" className='btn btn-warning' onClick={()=>navigate(-1)} >Back</Button>
+
             
         </Form>
        </div>

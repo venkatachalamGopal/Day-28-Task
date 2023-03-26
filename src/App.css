@@ -9,6 +9,15 @@ h3{
     color:green;
     font-weight: bold;
 }
+p{
+    text-align: center;
+    color: mediumpurple;
+    font-weight: bold;
+    font-size:18px ;
+}
+small{
+    font-size: 15px;
+}
 .containers {
     display: flex;
     flex-wrap: wrap;
@@ -19,27 +28,23 @@ h3{
     
     
 }
-p{
-    text-align: center;
-    color: mediumpurple;
-    font-weight: bold;
-    font-size:18px ;
-}
-
 .content{
     width: 420px;
-    /* border: 2px solid orange; */
-    min-height: 700px;
+    min-height: 630px;
     padding: 3px;
     text-align: justify;
     row-gap: 2px;
 }
-.addBtn{
-    color: black;
-    font-weight: bold;
-    position: relative;
-    left: 87%;
+.don{
+    /* border:2px dashed red; */
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    z-index: 99;
+    margin-right: 8px;
 }
+
 #brandName{
     color: orangered;
 }
@@ -63,9 +68,8 @@ p{
     left: 50px;
     height: 300px;
 }
-small{
-    font-size: 15px;
-}
+
+
 
 .Foot{
     

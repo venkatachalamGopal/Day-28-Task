@@ -33,7 +33,10 @@ export function Home(){
         <>
         <h3><u>CRUD Operation - Using Formik</u> </h3>
         <p><u>Amazon products</u></p>
+        <div className='don'>
+        <p></p>
         <Button onClick={()=>navigate("/add-product")} className="addBtn">Add New Products</Button>
+        </div>
         <div className='containers'>
         {data.map((obj,index)=><Product obj={obj} key={obj.id} 
         deleteBtn={<button onClick={()=>deleteData(obj.id)} className='btn btn-danger btn-sm' >Delete</button>}/>)}
